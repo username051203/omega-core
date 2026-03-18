@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,8 +45,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create latest OmegaProtocol.apk \
-            --title "Omega Protocol — Latest Build (unsigned)" \
-            --notes "Unsigned APK — install via adb or allow unknown sources." \
+            --title "Omega Protocol — Latest Build" \
+            --notes "Unsigned APK." \
             --repo ${{ github.repository }}
 
       - name: Upload APK artifact
