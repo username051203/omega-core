@@ -20,11 +20,21 @@ android {
         }
     }
 
+    signingConfigs {
+        release {
+            storeFile     file(System.getenv("KEYSTORE_PATH") ?: "omega.keystore")
+            storePassword System.getenv("KEYSTORE_PASS")     ?: "omega123"
+            keyAlias      System.getenv("KEY_ALIAS")         ?: "omega"
+            keyPassword   System.getenv("KEY_PASS")          ?: "omega123"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
         debug {
             applicationIdSuffix ".debug"
@@ -44,7 +54,6 @@ android {
 
 dependencies {
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.core:core:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

@@ -28,11 +28,19 @@ jobs:
         with:
           gradle-version: '8.0'
 
-      - name: Build unsigned release APK
+      - name: Decode keystore
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > app/omega.keystore
+
+      - name: Build signed release APK
         run: gradle assembleRelease --no-daemon --stacktrace
+        env:
+          KEYSTORE_PATH: omega.keystore
+          KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS }}
+          KEY_ALIAS:     ${{ secrets.KEY_ALIAS }}
+          KEY_PASS:      ${{ secrets.KEY_PASS }}
 
       - name: Rename APK
-        run: mv app/build/outputs/apk/release/app-release-unsigned.apk OmegaProtocol.apk 2>/dev/null || mv app/build/outputs/apk/release/app-release.apk OmegaProtocol.apk
+        run: mv app/build/outputs/apk/release/app-release.apk OmegaProtocol.apk
 
       - name: Delete old latest release
         continue-on-error: true
@@ -46,7 +54,7 @@ jobs:
         run: |
           gh release create latest OmegaProtocol.apk \
             --title "Omega Protocol — Latest Build" \
-            --notes "Unsigned APK." \
+            --notes "Signed release APK." \
             --repo ${{ github.repository }}
 
       - name: Upload APK artifact
