@@ -22,6 +22,10 @@ import java.util.*;
 public class ScheduleFragment extends Fragment {
 
     private ScheduleViewModel vm;
+    private Spinner spAddSubject, spAddChapter, spAddTopic;
+    private java.util.List<com.omega.protocol.model.Subject> allSubjects = new java.util.ArrayList<>();
+    private java.util.List<com.omega.protocol.model.Chapter> allChapters = new java.util.ArrayList<>();
+    private java.util.List<com.omega.protocol.model.Topic>   allTopics   = new java.util.ArrayList<>();
     private ScheduleItemAdapter poolAdapter;
     private RecyclerView rvPool;
     private TextView tvMissionDate, tvMissionSummary, tvCalMonth, tvSelectedDay;
@@ -251,7 +255,18 @@ public class ScheduleFragment extends Fragment {
     }
 
     // ── Pool ──────────────────────────────────────────────
+    private void populateSubjectSpinner(java.util.List<com.omega.protocol.model.Subject> subjects) {
+        if (spAddSubject == null) return;
+        allSubjects.clear();
+        allSubjects.addAll(subjects);
+        android.widget.ArrayAdapter<String> a = new android.widget.ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item);
+        a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        for (com.omega.protocol.model.Subject s : allSubjects) a.add(s.name);
+        spAddSubject.setAdapter(a);
+    }
+
     private void renderPool(ScheduleViewModel.ScheduleState state) {
+        populateSubjectSpinner(state != null ? state.subjects : new java.util.ArrayList<>());
         if (state == null || !isAdded()) return;
         // Items not yet assigned to any future day
         Set<String> futureAssigned = new HashSet<>();
@@ -281,4 +296,30 @@ public class ScheduleFragment extends Fragment {
         }
         vm.autoGenerate(() -> Toast.makeText(requireContext(), "Auto-filled from selected day", Toast.LENGTH_SHORT).show());
     }
+    private void doAddToPool() {
+        int si = spAddSubject.getSelectedItemPosition();
+        int ci = spAddChapter.getSelectedItemPosition();
+        int ti = spAddTopic.getSelectedItemPosition();
+        if (si < 0 || si >= allSubjects.size()) { android.widget.Toast.makeText(requireContext(), "Pick a subject", android.widget.Toast.LENGTH_SHORT).show(); return; }
+        if (ci < 0 || ci >= allChapters.size()) { android.widget.Toast.makeText(requireContext(), "Pick a chapter", android.widget.Toast.LENGTH_SHORT).show(); return; }
+        if (ti < 0 || ti >= allTopics.size())   { android.widget.Toast.makeText(requireContext(), "Pick a topic",   android.widget.Toast.LENGTH_SHORT).show(); return; }
+        com.omega.protocol.model.Subject  subj = allSubjects.get(si);
+        com.omega.protocol.model.Chapter  chap = allChapters.get(ci);
+        com.omega.protocol.model.Topic    top  = allTopics.get(ti);
+        com.omega.protocol.model.ScheduleItem item = new com.omega.protocol.model.ScheduleItem();
+        item.id        = "item_" + System.currentTimeMillis();
+        item.subjectId = subj.id;
+        item.chapterId = chap.id;
+        item.topicId   = top.id;
+        item.priority  = 50;
+        item.part      = 1;
+        com.omega.protocol.model.PassGroup pg = new com.omega.protocol.model.PassGroup("Lecture");
+        com.omega.protocol.model.SubPass   sp = new com.omega.protocol.model.SubPass(
+            top.id + "_L1_" + System.currentTimeMillis(), top.name + " — Lecture", 1.5f);
+        pg.subPasses.add(sp);
+        item.passes.add(pg);
+        vm.addItemToPool(item, () -> android.widget.Toast.makeText(
+            requireContext(), top.name + " added to pool", android.widget.Toast.LENGTH_SHORT).show());
+    }
+
 }

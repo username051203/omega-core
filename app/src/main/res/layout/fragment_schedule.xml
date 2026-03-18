@@ -108,6 +108,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility="gone">
+                                <TextView android:text="ADD TOPIC TO POOL"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/accent" android:textSize="9sp"
+                    android:fontFamily="monospace" android:textStyle="bold"
+                    android:letterSpacing="0.1" android:layout_marginBottom="6dp"
+                    android:layout_marginTop="16dp"/>
+                <Spinner android:id="@+id/spAddSubject"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@color/bg_log" android:layout_marginBottom="6dp"/>
+                <Spinner android:id="@+id/spAddChapter"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@color/bg_log" android:layout_marginBottom="6dp"/>
+                <Spinner android:id="@+id/spAddTopic"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@color/bg_log" android:layout_marginBottom="10dp"/>
+                <Button android:id="@+id/btnAddToPool"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="+ Add to Pool"
+                    android:backgroundTint="@color/win_bg" android:textColor="@color/good"
+                    android:layout_marginBottom="14dp"/>
                 <Button android:id="@+id/btnAutoGen"
                     android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:text="⚡ Auto-Generate Schedule"

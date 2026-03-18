@@ -127,8 +127,15 @@ public class DashboardFragment extends Fragment {
         String statusLabel = statusString(ds.status);
         tvBadge.setText("ALEXANDRIUS: " + statusLabel);
         setBadgeStyle(ds.status);
-        int chibiRes = chibiRes(ds.status);
-        Glide.with(this).load(chibiRes).into(imgChibi);
+        String chibiUrl;
+        switch (ds.status) {
+            case SLEEPING: chibiUrl = "https://iili.io/q1KEnZg.md.png"\; break;
+            case EATING:   chibiUrl = "https://iili.io/q1KE6AP.md.png"\; break;
+            default:       chibiUrl = "https://iili.io/q1KELog.md.png"\; break;
+        }
+        Glide.with(this).load(chibiUrl)
+             .placeholder(R.drawable.chibi_studying)
+             .into(imgChibi);
 
         // Status sub
         tvStatus.setText(ds.dailyBudget > 0
@@ -232,13 +239,6 @@ public class DashboardFragment extends Fragment {
         }
     }
 
-    private int chibiRes(RivalEngine.AliciaStatus s) {
-        switch (s) {
-            case SLEEPING:    return R.drawable.chibi_sleeping;
-            case EATING:      return R.drawable.chibi_eating;
-            default:          return R.drawable.chibi_studying;
-        }
-    }
 
     private Map<String,String> buildTopicNames(DashboardViewModel.DashState ds) {
         Map<String,String> m = new HashMap<>();
