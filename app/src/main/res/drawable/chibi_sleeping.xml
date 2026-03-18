@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp" android:height="64dp"
+    android:viewportWidth="64" android:viewportHeight="64">
+    <path android:fillColor="#0D1B2E"
+        android:pathData="M32,2 C15.43,2 2,15.43 2,32 C2,48.57 15.43,62 32,62 C48.57,62 62,48.57 62,32 C62,15.43 48.57,2 32,2 Z"/>
+    <!-- Head tilted -->
+    <path android:fillColor="#93C5FD"
+        android:pathData="M32,14 C27.58,14 24,17.58 24,22 C24,26.42 27.58,30 32,30 C36.42,30 40,26.42 40,22 C40,17.58 36.42,14 32,14 Z"/>
+    <!-- Closed eyes ZZZ -->
+    <path android:fillColor="#1E3A5F" android:pathData="M27,21 L31,21 L27,23 L31,23"/>
+    <path android:fillColor="#1E3A5F" android:pathData="M33,21 L37,21 L33,23 L37,23"/>
+    <!-- Z letters -->
+    <path android:fillColor="#60A5FA" android:pathData="M42,10 L46,10 L42,14 L46,14"/>
+    <path android:fillColor="#60A5FA" android:pathData="M44,6 L47,6 L44,9 L47,9"/>
+    <!-- Body horizontal (sleeping) -->
+    <path android:fillColor="#3B82F6"
+        android:pathData="M14,38 C14,34 18,32 32,32 C46,32 50,34 50,38 L50,46 L14,46 Z"/>
+    <!-- Pillow -->
+    <path android:fillColor="#1E3A5F"
+        android:pathData="M14,42 C14,39 20,38 26,38 L26,46 L14,46 Z"/>
+</vector>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp" android:height="64dp"
+    android:viewportWidth="64" android:viewportHeight="64">
+    <path android:fillColor="#2A1A0A"
+        android:pathData="M32,2 C15.43,2 2,15.43 2,32 C2,48.57 15.43,62 32,62 C48.57,62 62,48.57 62,32 C62,15.43 48.57,2 32,2 Z"/>
+    <!-- Head -->
+    <path android:fillColor="#FED7AA"
+        android:pathData="M32,12 C27.58,12 24,15.58 24,20 C24,24.42 27.58,28 32,28 C36.42,28 40,24.42 40,20 C40,15.58 36.42,12 32,12 Z"/>
+    <!-- Happy eating mouth -->
+    <path android:fillColor="#7F1D1D"
+        android:pathData="M28,22 Q32,27 36,22 Z"/>
+    <!-- Eyes -->
+    <path android:fillColor="#1F2937" android:pathData="M28,18 C28,19.1 28.9,20 30,20 C31.1,20 32,19.1 32,18 C32,16.9 31.1,16 30,16 C28.9,16 28,16.9 28,18 Z"/>
+    <path android:fillColor="#1F2937" android:pathData="M32,18 C32,19.1 32.9,20 34,20 C35.1,20 36,19.1 36,18 C36,16.9 35.1,16 34,16 C32.9,16 32,16.9 32,18 Z"/>
+    <!-- Body -->
+    <path android:fillColor="#FB923C"
+        android:pathData="M20,44 C20,36 25.37,30 32,30 C38.63,30 44,36 44,44 L44,50 L20,50 Z"/>
+    <!-- Bowl -->
+    <path android:fillColor="#F97316" android:pathData="M24,42 Q32,38 40,42 L38,50 L26,50 Z"/>
+    <!-- Steam -->
+    <path android:fillColor="#FED7AA" android:strokeColor="#FED7AA" android:strokeWidth="1.5"
+        android:pathData="M29,36 Q30,33 29,30"/>
+    <path android:fillColor="#FED7AA" android:strokeColor="#FED7AA" android:strokeWidth="1.5"
+        android:pathData="M33,36 Q34,33 33,30"/>
+</vector>

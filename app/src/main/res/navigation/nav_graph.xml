@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment android:id="@+id/dashboardFragment"
+        android:name="com.omega.protocol.ui.dashboard.DashboardFragment"
+        android:label="Terminal Dashboard"/>
+
+    <fragment android:id="@+id/scheduleFragment"
+        android:name="com.omega.protocol.ui.schedule.ScheduleFragment"
+        android:label="Missions"/>
+
+    <fragment android:id="@+id/logFragment"
+        android:name="com.omega.protocol.ui.log.LogFragment"
+        android:label="Log Session"/>
+
+    <fragment android:id="@+id/syllabusFragment"
+        android:name="com.omega.protocol.ui.syllabus.SyllabusFragment"
+        android:label="Syllabus Matrix"/>
+
+    <fragment android:id="@+id/archiveFragment"
+        android:name="com.omega.protocol.ui.archive.ArchiveFragment"
+        android:label="Chronicle Archive"/>
+
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.omega.protocol.ui.profile.ProfileFragment"
+        android:label="Profile &amp; Engine"/>
+
+    <fragment android:id="@+id/cosmeticsFragment"
+        android:name="com.omega.protocol.ui.cosmetics.CosmeticsFragment"
+        android:label="Cosmetics"/>
+
+    <fragment android:id="@+id/simulationFragment"
+        android:name="com.omega.protocol.ui.simulation.SimulationFragment"
+        android:label="Simulation Engine"/>
+
+    <fragment android:id="@+id/syncFragment"
+        android:name="com.omega.protocol.ui.sync.SyncFragment"
+        android:label="Kernel Sync"/>
+
+    <fragment android:id="@+id/qrSyncFragment"
+        android:name="com.omega.protocol.ui.sync.QrSyncFragment"
+        android:label="QR Sync"/>
+
+</navigation>

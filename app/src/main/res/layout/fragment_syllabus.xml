@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark"
+    android:padding="16dp">
+
+    <!-- Subject selector -->
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="14dp">
+            <TextView android:text="📚 ACTIVE SUBJECT"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="@color/accent" android:textSize="10sp"
+                android:textStyle="bold" android:fontFamily="monospace"
+                android:letterSpacing="0.1" android:layout_marginBottom="8dp"/>
+            <Spinner android:id="@+id/subjectSpinner"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@color/bg_log" android:padding="8dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="10dp">
+                <Button android:id="@+id/btnAddSubject"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="+ Subject"
+                    android:textSize="11sp" android:backgroundTint="@color/bg_nav"
+                    android:textColor="@color/accent" android:layout_marginEnd="6dp"/>
+                <Button android:id="@+id/btnAddChapter"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="+ Chapter"
+                    android:textSize="11sp" android:backgroundTint="@color/bg_nav"
+                    android:textColor="@color/accent" android:layout_marginEnd="6dp"/>
+                <Button android:id="@+id/btnBatchImport"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Batch"
+                    android:textSize="11sp" android:backgroundTint="@color/bg_nav"
+                    android:textColor="@color/warn"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSyllabus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

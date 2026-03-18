@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Hue gradient (left to right) -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="#FFFF0000"
+                android:endColor="#FFFF0000"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <!-- Actually the ColorPickerView from skydoves handles its own palette rendering -->
+    <!-- This drawable is used as background; the library draws the color wheel itself -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF1A1040"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</layer-list>

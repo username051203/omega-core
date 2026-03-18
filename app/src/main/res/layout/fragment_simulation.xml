@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <TextView android:text="⚡ SIMULATION ENGINE"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/good" android:textSize="13sp"
+                    android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginBottom="4dp"/>
+                <TextView android:text="Fast-forward time to test the rival engine without waiting."
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_muted" android:textSize="10sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Simulated Clock -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@color/bg_log" android:padding="16dp"
+                    android:orientation="vertical" android:gravity="center"
+                    android:layout_marginBottom="14dp">
+                    <TextView android:text="SIMULATED CLOCK"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_muted" android:textSize="9sp"
+                        android:fontFamily="monospace" android:letterSpacing="0.15"
+                        android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:id="@+id/tvSimClock"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="NOT RUNNING" android:textColor="@color/warn"
+                        android:textSize="32sp" android:textStyle="bold"
+                        android:fontFamily="monospace"/>
+                </LinearLayout>
+
+                <!-- Score display -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="14dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical"
+                        android:gravity="center" android:background="@color/bg_log"
+                        android:padding="12dp" android:layout_marginEnd="6dp">
+                        <TextView android:text="YOU"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_muted" android:textSize="9sp"
+                            android:fontFamily="monospace"/>
+                        <TextView android:id="@+id/tvSimUser"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0" android:textColor="@color/good"
+                            android:textSize="24sp" android:textStyle="bold"
+                            android:fontFamily="monospace"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical"
+                        android:gravity="center" android:background="@color/bg_log"
+                        android:padding="12dp" android:layout_marginStart="6dp">
+                        <TextView android:text="ALEXANDRIUS"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_muted" android:textSize="9sp"
+                            android:fontFamily="monospace"/>
+                        <TextView android:id="@+id/tvSimRival"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0.0" android:textColor="@color/accent"
+                            android:textSize="24sp" android:textStyle="bold"
+                            android:fontFamily="monospace"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Controls -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+                    <TextView android:text="Speed:"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_muted" android:textSize="11sp"
+                        android:layout_marginEnd="8dp"/>
+                    <Spinner android:id="@+id/spinnerSimSpeed"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:background="@color/bg_log"
+                        android:popupBackground="@color/bg_card"/>
+                </LinearLayout>
+
+                <TimePicker android:id="@+id/simTimePicker"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:timePickerMode="spinner"
+                    android:layout_marginBottom="14dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/btnSimStart"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="▶ Start"
+                        android:backgroundTint="@color/win_bg" android:textColor="@color/good"
+                        android:layout_marginEnd="6dp"/>
+                    <Button android:id="@+id/btnSimStop"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="⏹ Stop"
+                        android:backgroundTint="@color/loss_bg" android:textColor="@color/bad"
+                        android:enabled="false" android:layout_marginStart="6dp"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnSimReset"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:text="↺ Reset to Real Time"
+                    android:backgroundTint="@color/bg_nav" android:textColor="@color/text_muted"/>
+
+                <!-- Sim log -->
+                <TextView android:text="SIM LOG"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_muted" android:textSize="9sp"
+                    android:fontFamily="monospace" android:letterSpacing="0.15"
+                    android:textStyle="bold" android:layout_marginTop="14dp"
+                    android:layout_marginBottom="6dp"/>
+                <ScrollView android:id="@+id/svSimLog"
+                    android:layout_width="match_parent" android:layout_height="120dp"
+                    android:background="@color/bg_log">
+                    <TextView android:id="@+id/tvSimLog"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:textColor="@color/good" android:textSize="10sp"
+                        android:fontFamily="monospace" android:padding="10dp"
+                        android:lineSpacingMultiplier="1.4"/>
+                </ScrollView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

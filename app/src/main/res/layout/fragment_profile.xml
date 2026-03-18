@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ── YOUR PROFILE ── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgUserPreview"
+                        android:layout_width="72dp" android:layout_height="72dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_avatar_placeholder"
+                        app:civ_border_color="@color/good" app:civ_border_width="2dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:text="YOUR PROFILE"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/good" android:textSize="13sp"
+                            android:textStyle="bold" android:fontFamily="monospace"
+                            android:letterSpacing="0.1"/>
+                        <TextView android:text="The Operator"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_muted" android:textSize="10sp"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView android:text="DISPLAY NAME" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etUserName"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text" android:maxLength="20"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:text="TAGLINE" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etUserTagline"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text" android:maxLength="40"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:text="DEFAULT PHOTO URL" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etUserPhotoDefault"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textUri" android:background="@color/bg_log"
+                    android:textColor="@color/text_primary" android:padding="10dp"/>
+
+                <TextView android:text="WIN PHOTO URL" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etUserPhotoWin"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textUri" android:background="@color/bg_log"
+                    android:textColor="@color/text_primary" android:padding="10dp"/>
+
+                <TextView android:text="LOSS PHOTO URL" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etUserPhotoLoss"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textUri" android:background="@color/bg_log"
+                    android:textColor="@color/text_primary" android:padding="10dp"/>
+
+                <Button android:id="@+id/btnSaveUser"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="💾 Save Your Profile"
+                    android:backgroundTint="@color/win_bg" android:textColor="@color/good"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── ALEXANDRIUS PROFILE ── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgAlexPreview"
+                        android:layout_width="72dp" android:layout_height="72dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_avatar_placeholder"
+                        app:civ_border_color="@color/accent" app:civ_border_width="2dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:text="RIVAL PROFILE"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/accent" android:textSize="13sp"
+                            android:textStyle="bold" android:fontFamily="monospace"
+                            android:letterSpacing="0.1"/>
+                        <TextView android:text="The Rival"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_muted" android:textSize="10sp"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView android:text="DISPLAY NAME" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etAlexName"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text" android:maxLength="20"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:text="TAGLINE" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etAlexTagline"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text" android:maxLength="40"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:text="DEFAULT PHOTO URL" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etAlexPhotoDefault"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textUri" android:background="@color/bg_log"
+                    android:textColor="@color/text_primary" android:padding="10dp"/>
+
+                <TextView android:text="WIN PHOTO URL (she loses)" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etAlexPhotoWin"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textUri" android:background="@color/bg_log"
+                    android:textColor="@color/text_primary" android:padding="10dp"/>
+
+                <TextView android:text="LOSS PHOTO URL (she wins)" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etAlexPhotoLoss"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textUri" android:background="@color/bg_log"
+                    android:textColor="@color/text_primary" android:padding="10dp"/>
+
+                <Button android:id="@+id/btnSaveAlex"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="💾 Save ALEXANDRIUS Profile"
+                    android:backgroundTint="@color/bg_nav" android:textColor="@color/accent"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── ENGINE CONFIG ── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <TextView android:text="⚙️ ENGINE &amp; CONFIG"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/accent" android:textSize="12sp"
+                    android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginBottom="14dp"/>
+
+                <TextView android:text="EXAM DATE (YYYY-MM-DD)" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etExamDate"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text" android:hint="e.g. 2026-06-15"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:text="ANCHOR HOUR (end-of-day, 0–23.5)" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etAnchorHour"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" android:hint="3.5"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:text="DAILY STUDY HOURS" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etDailyHrs"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" android:hint="8"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <Button android:id="@+id/btnSaveEngine"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="💾 Save Config"
+                    android:backgroundTint="@color/win_bg" android:textColor="@color/good"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── BIO CONSTRAINTS ── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <TextView android:text="🧬 BIO CONSTRAINTS"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/accent" android:textSize="12sp"
+                    android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginBottom="4dp"/>
+                <TextView
+                    android:text="When ALEXANDRIUS is NOT studying. Budget auto-calculates from what's left."
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_muted" android:textSize="10sp"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView android:text="😴 SLEEP — HH:MM-HH:MM, comma-separated" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etSleep"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text" android:hint="e.g. 23:00-06:30"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:text="🍽️ MEALS — start times, each blocks 45 min" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etMeals"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text" android:hint="e.g. 08:30, 13:00, 20:00"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:text="🧘 BUFFER / PERSONAL — HH:MM-HH:MM" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_muted"
+                    android:textSize="9sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:letterSpacing="0.1" android:layout_marginTop="12dp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/etBuffer"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text" android:hint="e.g. 17:00-18:30"
+                    android:background="@color/bg_log" android:textColor="@color/text_primary"
+                    android:padding="10dp"/>
+
+                <TextView android:id="@+id/tvAvailHrs"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/good" android:textSize="11sp"
+                    android:fontFamily="monospace" android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+
+                <Button android:id="@+id/btnSaveRoutine"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="💾 Save Constraints"
+                    android:backgroundTint="@color/win_bg" android:textColor="@color/good"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

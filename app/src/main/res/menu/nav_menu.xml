@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/dashboardFragment"
+            android:icon="@drawable/ic_nav_dashboard"
+            android:title="@string/nav_dashboard"/>
+        <item android:id="@+id/scheduleFragment"
+            android:icon="@drawable/ic_nav_schedule"
+            android:title="@string/nav_schedule"/>
+        <item android:id="@+id/logFragment"
+            android:icon="@drawable/ic_nav_log"
+            android:title="@string/nav_log"/>
+        <item android:id="@+id/syllabusFragment"
+            android:icon="@drawable/ic_nav_syllabus"
+            android:title="@string/nav_syllabus"/>
+        <item android:id="@+id/archiveFragment"
+            android:icon="@drawable/ic_nav_archive"
+            android:title="@string/nav_archive"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_nav_profile"
+            android:title="@string/nav_profile"/>
+        <item android:id="@+id/cosmeticsFragment"
+            android:icon="@drawable/ic_nav_cosmetics"
+            android:title="@string/nav_cosmetics"/>
+        <item android:id="@+id/simulationFragment"
+            android:icon="@drawable/ic_nav_simulation"
+            android:title="@string/nav_simulation"/>
+        <item android:id="@+id/syncFragment"
+            android:icon="@drawable/ic_nav_sync"
+            android:title="@string/nav_sync"/>
+    </group>
+</menu>

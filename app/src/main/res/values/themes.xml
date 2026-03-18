@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── BASE OMEGA THEME (Neon Pulse) ────────────────── -->
+    <style name="Theme.Omega" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent2</item>
+        <item name="colorSecondary">@color/accent3</item>
+        <item name="colorSecondaryVariant">@color/accent2</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="colorError">@color/bad</item>
+        <item name="android:statusBarColor">@color/bg_header</item>
+        <item name="android:navigationBarColor">@color/bg_header</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <!-- EditText -->
+        <item name="editTextStyle">@style/OmegaEditText</item>
+        <!-- Card -->
+        <item name="materialCardViewStyle">@style/OmegaCard</item>
+        <!-- Button -->
+        <item name="buttonStyle">@style/OmegaButton</item>
+    </style>
+
+    <!-- ── MIDNIGHT OCEAN ─────────────────────────────── -->
+    <style name="Theme.Omega.Ocean" parent="Theme.Omega">
+        <item name="colorPrimary">@color/accent_ocean</item>
+        <item name="colorPrimaryVariant">@color/accent2_ocean</item>
+        <item name="colorSecondary">@color/accent2_ocean</item>
+    </style>
+
+    <!-- ── SUNSET GLOW ────────────────────────────────── -->
+    <style name="Theme.Omega.Sunset" parent="Theme.Omega">
+        <item name="colorPrimary">@color/accent_sunset</item>
+        <item name="colorPrimaryVariant">@color/accent2_sunset</item>
+        <item name="colorSecondary">@color/accent2_sunset</item>
+    </style>
+
+    <!-- ── FOREST DEW ─────────────────────────────────── -->
+    <style name="Theme.Omega.Forest" parent="Theme.Omega">
+        <item name="colorPrimary">@color/accent_forest</item>
+        <item name="colorPrimaryVariant">@color/accent2_forest</item>
+        <item name="colorSecondary">@color/accent2_forest</item>
+    </style>
+
+    <!-- ── CUSTOM ACCENT OVERLAY ──────────────────────── -->
+    <style name="CustomAccentOverlay" parent="">
+        <!-- Applied at runtime via applyStyle — colorPrimary overridden programmatically -->
+    </style>
+
+    <!-- ── COMPONENT STYLES ──────────────────────────── -->
+    <style name="OmegaEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="android:background">@color/bg_log</item>
+    </style>
+
+    <style name="OmegaCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/bg_card</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">6dp</item>
+    </style>
+
+    <style name="OmegaButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/accent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="OmegaButton.Secondary" parent="OmegaButton">
+        <item name="backgroundTint">@color/bg_nav</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="OmegaButton.Good" parent="OmegaButton">
+        <item name="backgroundTint">@color/win_bg</item>
+        <item name="android:textColor">@color/good</item>
+    </style>
+
+    <style name="OmegaButton.Bad" parent="OmegaButton">
+        <item name="backgroundTint">@color/loss_bg</item>
+        <item name="android:textColor">@color/bad</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Splash theme -->
+    <style name="Theme.Omega.Splash" parent="Theme.Omega">
+    </style>
+
+</resources>

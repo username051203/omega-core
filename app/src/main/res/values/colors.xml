@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="bg_dark">#0D0F1A</color>
+    <color name="bg_card">#161929</color>
+    <color name="bg_log">#090B16</color>
+    <color name="bg_header">#0B0D18</color>
+    <color name="bg_menu">#0E1020</color>
+    <color name="bg_nav">#1A1E38</color>
+    <color name="border">#252A45</color>
+
+    <!-- Text -->
+    <color name="text_primary">#E8EAFF</color>
+    <color name="text_muted">#8890C0</color>
+
+    <!-- Accent — Neon Pulse default -->
+    <color name="accent">#7C6FFF</color>
+    <color name="accent2">#FF6FD8</color>
+    <color name="accent3">#00E5C8</color>
+
+    <!-- Semantic -->
+    <color name="good">#39FFA0</color>
+    <color name="warn">#FFCB47</color>
+    <color name="bad">#FF6B6B</color>
+
+    <!-- Glow (alpha versions for overlays) -->
+    <color name="glow_accent">#597C6FFF</color>
+    <color name="glow_accent2">#40FF6FD8</color>
+
+    <!-- Theme variants - Ocean -->
+    <color name="accent_ocean">#38BDF8</color>
+    <color name="accent2_ocean">#818CF8</color>
+
+    <!-- Theme variants - Sunset -->
+    <color name="accent_sunset">#F97316</color>
+    <color name="accent2_sunset">#EC4899</color>
+
+    <!-- Theme variants - Forest -->
+    <color name="accent_forest">#4ADE80</color>
+    <color name="accent2_forest">#A3E635</color>
+
+    <!-- Status badge backgrounds -->
+    <color name="badge_studying">#0A2A0A</color>
+    <color name="badge_sleeping">#0D1B2E</color>
+    <color name="badge_eating">#2A1A0A</color>
+    <color name="badge_buffer">#1E1A2E</color>
+    <color name="badge_none">#252A45</color>
+
+    <!-- Pass type backgrounds -->
+    <color name="pass_lecture">#1E3A5F</color>
+    <color name="pass_reading">#3B2A1A</color>
+    <color name="pass_qbank">#14532D</color>
+    <color name="pass_revision">#2D1B69</color>
+    <color name="pass_notes">#1F2937</color>
+
+    <!-- Win/Loss -->
+    <color name="win_bg">#14532D</color>
+    <color name="loss_bg">#7F1D1D</color>
+    <color name="tie_bg">#1E3A8A</color>
+    <color name="win_text">#86EFAC</color>
+    <color name="loss_text">#FCA5A5</color>
+    <color name="tie_text">#93C5FD</color>
+
+    <!-- White / Black -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

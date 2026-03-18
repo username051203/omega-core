@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="7dp"
+    android:paddingHorizontal="4dp">
+
+    <CheckBox
+        android:id="@+id/spCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:buttonTint="@color/good"/>
+
+    <TextView
+        android:id="@+id/spType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="9sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="2dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/pass_lecture"
+        android:textColor="@color/text_primary"/>
+
+    <TextView
+        android:id="@+id/spLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/text_primary"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/spHrs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/warn"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:background="@color/bg_log"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"/>
+
+</LinearLayout>
